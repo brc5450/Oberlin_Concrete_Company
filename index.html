@@ -15,6 +15,8 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
 
     <title>Oberlin Concrete Company</title>
   </head>
@@ -49,42 +51,118 @@
       </div>
     </nav>
 
-    <section class="About">
-      <img src="/images/concrete_sign.jpg" alt="company logo" />
-      <h1>We turn your ideas into concrete</h1>
-      <h1>Professional custom concrete work</h1>
-    </section>
-
-    <section class="Calculator">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Pattern</h3>
-          <div class="patterns">Square Slab</div>
-          <div class="patterns">Round Slab</div>
-          <div class="patterns">Wall</div>
-          <div class="patterns">Footer</div>
-          <div class="patterns">Square Column</div>
-          <div class="patterns">Round Column</div>
-          <div class="patterns">Steps</div>
-          <div class="patterns">Curbs & Gutters</div>
-        </div>
-        <div class="col-sm-4">
-          <h3>Pattern inputs</h3>
-          <!-- container for input field based on type of pattern selected -->
-          <div class="col-sm-4">input field container</div>
-          <!-- container for the answer of cubic yardage based on user input -->
-          <div class="col-sm-4">input field answer container</div>
-        </div>
-        <figure class="col-sm-4">
-          <h3>Picture of pattern</h3>
-          <!-- container for image of pattern based on type of pattern selected -->
-          <div class="col-sm-4">image container of pattern selected</div>
-        </figure>
+    <section class="about">
+      <img class="logo" src="/images/concrete_sign.jpg" alt="company logo" />
+      <div class="about-textcontainer">
+        <h1>We turn your ideas into concrete</h1>
+        <h1>Professional custom concrete work</h1>
       </div>
     </section>
 
-    <section>
-      <div class="contactUs">
+    <section class="calculator">
+      <div class="container">
+        <h3>Yardage Calculator</h3>
+        <ul class="nav nav-tabs" id="patternTab" role="tablist">
+          <li class="nav-item active">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#square_slab"
+              role="tab"
+              aria-controls="square_slab"
+              >Square Slab</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#round_slab"
+              role="tab"
+              aria-controls="round_slab"
+              >Round Slab</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#wall"
+              role="tab"
+              aria-controls="wall"
+              >Wall</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#footer"
+              role="tab"
+              aria-controls="footer"
+              >Footer</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#square_column"
+              role="tab"
+              aria-controls="square_column"
+              >Square Column</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#round_column"
+              role="tab"
+              aria-controls="round_column"
+              >Round Column</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#curb_gutter"
+              role="tab"
+              aria-controls="curb_gutter"
+              >Curb & Gutter</a
+            >
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="square_slab" role="tabpanel">
+            <h3>squareslab</h3>
+          </div>
+          <div class="tab-pane" id="round_slab" role="tabpanel">
+            <h3>roundslab</h3>
+          </div>
+          <div class="tab-pane" id="wall" role="tabpanel">
+            <h3>wall</h3>
+          </div>
+          <div class="tab-pane" id="footer" role="tabpanel">
+            <h3>footer</h3>
+          </div>
+          <div class="tab-pane" id="square_column" role="tabpanel">
+            <h3>squarecolumn</h3>
+          </div>
+          <div class="tab-pane" id="round_column" role="tabpanel">
+            <h3>roundcolumn</h3>
+          </div>
+          <div class="tab-pane" id="curb_gutter" role="tabpanel">
+            <h3>curbgutter</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contactUs">
+      <div class="contactUs-text">
         <h1>Contact Us</h1>
         <h1>Oberlin Concrete Company</h1>
         <h1>701 N Penn Ave, Oberlin, KS 67749</h1>
@@ -123,5 +201,32 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Link to script file -->
+    <script type="text/javascript" src="/javascript/main.js"></script>
   </body>
 </html>
+
+<!-- <div class="col-sm-4">
+    <h3>Pattern</h3>
+    <div class="patterns">Square Slab</div>
+    <div class="patterns">Round Slab</div>
+    <div class="patterns">Wall</div>
+    <div class="patterns">Footer</div>
+    <div class="patterns">Square Column</div>
+    <div class="patterns">Round Column</div>
+    <div class="patterns">Steps</div>
+    <div class="patterns">Curbs & Gutters</div>
+  </div>
+  <div class="col-sm-4">
+    <h3>Pattern inputs</h3>
+    container for input field based on type of pattern selected
+    <div class="col-sm-4">input field container</div>
+    container for the answer of cubic yardage based on user input
+    <div class="col-sm-4">input field answer container</div>
+  </div>
+  <figure class="col-sm-4">
+    <h3>Picture of pattern</h3>
+    container for image of pattern based on type of pattern selected
+    <div class="col-sm-4">image container of pattern selected</div>
+  </figure> -->
