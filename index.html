@@ -8,6 +8,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -36,18 +42,20 @@
       </button>
 
       <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Calculator</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
+      <div class="container-nav">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -60,6 +68,7 @@
     </section>
 
     <section class="calculator">
+      <!--Yardage Calculator Nav Tabs-->
       <div class="container">
         <h3>Yardage Calculator</h3>
         <ul class="nav nav-tabs" id="patternTab" role="tablist">
@@ -127,6 +136,16 @@
             <a
               class="nav-link"
               data-toggle="tab"
+              href="#steps"
+              role="tab"
+              aria-controls="steps"
+              >Steps</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-toggle="tab"
               href="#curb_gutter"
               role="tab"
               aria-controls="curb_gutter"
@@ -135,32 +154,250 @@
           </li>
         </ul>
 
+        <!-- Yardage Calculator Tab Content-->
         <div class="tab-content">
           <div class="tab-pane active" id="square_slab" role="tabpanel">
             <h3>squareslab</h3>
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Depth"
+              id="squareslab-depth"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Length"
+              id="squareslab-length"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Width"
+              id="squareslab-width"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Quantity"
+              id="squareslab-quantity"
+            />
           </div>
           <div class="tab-pane" id="round_slab" role="tabpanel">
             <h3>roundslab</h3>
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Depth"
+              id="roundslab-length"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Diameter"
+              id="roundslab-diameter"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Quantity"
+              id="roundslab-quantity"
+            />
           </div>
           <div class="tab-pane" id="wall" role="tabpanel">
             <h3>wall</h3>
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Height"
+              id="wall-height"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Length"
+              id="wall-length"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Width"
+              id="wall-width"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Quantity"
+              id="wall-quantity"
+            />
           </div>
           <div class="tab-pane" id="footer" role="tabpanel">
             <h3>footer</h3>
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Depth"
+              id="footer-depth"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Length"
+              id="footer-length"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Width"
+              id="footer-width"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Quantity"
+              id="footer-quantity"
+            />
           </div>
           <div class="tab-pane" id="square_column" role="tabpanel">
             <h3>squarecolumn</h3>
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Height"
+              id="squarecolumn-height"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Length"
+              id="squarecolumn-length"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Width"
+              id="squarecolumn-width"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Quantity"
+              id="squarecolumn-quantity"
+            />
           </div>
           <div class="tab-pane" id="round_column" role="tabpanel">
             <h3>roundcolumn</h3>
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Height"
+              id="roundcolumn-height"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Diameter"
+              id="roundcolumn-diameter"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Quantity"
+              id="roundcolumn-quantity"
+            />
           </div>
-          <div class="tab-pane" id="curb_gutter" role="tabpanel">
+          <div class="tab-pane" id="steps" role="tabpanel">
+            <h3>Steps</h3>
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Platform Depth"
+              id="steps-platformdepth"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Rise Height"
+              id="steps-riseheight"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Run Depth"
+              id="steps-rundepth"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Width"
+              id="steps-width"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Number of Steps"
+              id="steps-numberofsteps"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Quantity"
+              id="steps-quantity"
+            />
+          </div>
+          <div
+            class="tab-pane"
+            class="calculator-input"
+            id="curb_gutter"
+            role="tabpanel"
+          >
             <h3>curbgutter</h3>
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Curb Depth"
+              id="curb-depth"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Curb Height"
+              id="curb-height"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Gutter Width"
+              id="gutter-width"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Flag Thickness"
+              id="flag-thickness"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Length"
+              id="curb-length"
+            />
+            <input
+              type="text"
+              class="calculator-input"
+              placeholder="Quantity"
+              id="curb-quantity"
+            />
           </div>
         </div>
       </div>
+      <div class="yardage-answer-container">
+        <h3>Cubic Yards Answer:</h3>
+        <div class="yardage-answer"></div>
+      </div>
     </section>
 
+    <!--Contact Us-->
     <section class="contactUs">
       <div class="contactUs-text">
         <h1>Contact Us</h1>

@@ -1,3 +1,7 @@
+body {
+  background: #bebebe;
+}
+
 .about .logo {
   width: 100%;
   height: 400px;
@@ -10,11 +14,16 @@
 
 .about-textcontainer > h1 {
   color: #fe4b4b;
+  font-family: "Lobster", cursive;
+}
+
+.about-textcontainer > h1:nth-last-child(1) {
+  padding-left: 50%;
 }
 
 .calculator {
   width: 100%;
-  height: fill;
+  height: minmax(1140px, auto);
   margin: auto;
 }
 
@@ -46,7 +55,7 @@
 .tab-content > .active {
   display: block;
   background: #007bff;
-  min-height: 165px;
+  min-height: 329px;
 }
 .nav.nav-tabs {
   float: left;
@@ -55,4 +64,30 @@
   border-bottom: 0;
   border-right: 1px solid transparent;
   padding-right: 15px;
+}
+
+.tab-content {
+  height: minmax(1140px, auto);
+}
+
+.yardage-answer-container {
+  border: 1px Solid #5b4e4e;
+}
+
+.contactUs {
+  margin-top: 200px;
+}
+
+.contactUs-text {
+  float: left;
+  margin: 2em;
+  background: #5b4e4e;
+  color: #ffe6e6;
+}
+
+footer {
+  background: #5b4e4e;
+  text-align: center;
+  color: #fe4b4b;
+  height: 40px;
 }
