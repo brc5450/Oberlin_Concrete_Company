@@ -158,6 +158,7 @@
         <div class="tab-content">
           <div class="tab-pane active" id="square_slab" role="tabpanel">
             <h3>squareslab</h3>
+            <form></form>
             <input
               type="text"
               class="calculator-input"
@@ -182,6 +183,13 @@
               placeholder="Quantity"
               id="squareslab-quantity"
             />
+            <img src="images/square_slab.png" alt="square slab" />
+            <input
+              type="submit"
+              class="calculator-submit-button"
+              placeholder="Submit"
+              id="squareslab_submit"
+            />
           </div>
           <div class="tab-pane" id="round_slab" role="tabpanel">
             <h3>roundslab</h3>
@@ -202,6 +210,13 @@
               class="calculator-input"
               placeholder="Quantity"
               id="roundslab-quantity"
+            />
+            <img src="images/round_slab.png" alt="round slab" />
+            <input
+              type="submit"
+              class="calculator-submit-button"
+              placeholder="Submit"
+              id="roundslab_submit"
             />
           </div>
           <div class="tab-pane" id="wall" role="tabpanel">
@@ -230,6 +245,13 @@
               placeholder="Quantity"
               id="wall-quantity"
             />
+            <img src="images/wall.png" alt="wall" />
+            <input
+              type="submit"
+              class="calculator-submit-button"
+              placeholder="Submit"
+              id="wall_submit"
+            />
           </div>
           <div class="tab-pane" id="footer" role="tabpanel">
             <h3>footer</h3>
@@ -256,6 +278,13 @@
               class="calculator-input"
               placeholder="Quantity"
               id="footer-quantity"
+            />
+            <img src="images/footer.png" alt="footer" />
+            <input
+              type="submit"
+              class="calculator-submit-button"
+              placeholder="Submit"
+              id="footer_submit"
             />
           </div>
           <div class="tab-pane" id="square_column" role="tabpanel">
@@ -284,6 +313,13 @@
               placeholder="Quantity"
               id="squarecolumn-quantity"
             />
+            <img src="images/square_column.png" alt="square column" />
+            <input
+              type="submit"
+              class="calculator-submit-button"
+              placeholder="Submit"
+              id="squarecolumn_submit"
+            />
           </div>
           <div class="tab-pane" id="round_column" role="tabpanel">
             <h3>roundcolumn</h3>
@@ -304,6 +340,13 @@
               class="calculator-input"
               placeholder="Quantity"
               id="roundcolumn-quantity"
+            />
+            <img src="images/round_column.png" alt="round column" />
+            <input
+              type="submit"
+              class="calculator-submit-button"
+              placeholder="Submit"
+              id="roundcolumn_submit"
             />
           </div>
           <div class="tab-pane" id="steps" role="tabpanel">
@@ -343,6 +386,13 @@
               class="calculator-input"
               placeholder="Quantity"
               id="steps-quantity"
+            />
+            <img src="images/steps.png" alt="steps" />
+            <input
+              type="submit"
+              class="calculator-submit-button"
+              placeholder="Submit"
+              id="steps_submit"
             />
           </div>
           <div
@@ -388,12 +438,19 @@
               placeholder="Quantity"
               id="curb-quantity"
             />
+            <img src="images/curb_gutter.png" alt="curbs & gutters" />
+            <input
+              type="submit"
+              class="calculator-submit-button"
+              placeholder="Submit"
+              id="curb_submit"
+            />
           </div>
         </div>
       </div>
       <div class="yardage-answer-container">
         <h3>Cubic Yards Answer:</h3>
-        <div class="yardage-answer"></div>
+        <div class="yardage-answer" id="answer-totalYardage"></div>
       </div>
     </section>
 
@@ -440,7 +497,7 @@
     ></script>
 
     <!-- Link to script file -->
-    <script type="text/javascript" src="/javascript/main.js"></script>
+    <script type="text/javascript" src="./javascript/main.js"></script>
   </body>
 </html>
 
