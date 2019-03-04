@@ -1,0 +1,74 @@
+body {
+  background: #bebebe;
+}
+
+.logo img {
+  margin-top: 57px;
+  width: 100%;
+  height: 400px;
+}
+
+.companySaying {
+  height: minmax(100px, auto);
+  background: #5b4e4e;
+}
+
+.companySaying h3 {
+  color: #ffe6e6;
+  font-family: "Lobster", cursive;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.calculator {
+  margin-top: 5em;
+}
+
+.nav-tabs {
+  width: 100%;
+  justify-content: center;
+}
+
+.nav-item {
+  background: #5b4e4e;
+}
+
+.nav-item a {
+  color: #ffe6e6;
+}
+
+.input_picture_container {
+  margin-top: 1.5em;
+}
+
+.calculator-answer {
+  margin-top: 2em;
+}
+.answer-box {
+  background: #ffffff;
+  color: #111111;
+  border: 2px solid #111111;
+  justify-self: center;
+}
+
+.contactUs {
+  margin-top: 5em;
+}
+.contact-us-box {
+  padding: 2em;
+  background: #5b4e4e;
+  color: #ffe6e6;
+  height: minmax(450px, auto);
+}
+
+.contact-us-box h1 {
+  padding: 10px 3em;
+}
+
+footer {
+  background: #5b4e4e;
+  text-align: center;
+  color: #fe4b4b;
+  height: 40px;
+  margin-top: 5em;
+}
