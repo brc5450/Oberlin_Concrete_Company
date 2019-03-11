@@ -1,0 +1,30 @@
+{
+  "name": "oberlin_concrete_company",
+  "version": "1.0.0",
+  "description": "A website for a concrete business",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/critt1000/Oberlin_Concrete_Company.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/critt1000/Oberlin_Concrete_Company/issues"
+  },
+  "homepage": "https://github.com/critt1000/Oberlin_Concrete_Company#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

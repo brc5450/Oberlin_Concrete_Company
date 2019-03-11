@@ -22,7 +22,7 @@
       crossorigin="anonymous"
     />
     <!-- Link to stylesheet -->
-    <link rel="stylesheet" href="/css/style1.css" />
+    <link rel="stylesheet" href="../public/css/style1.css" />
 
     <title>Oberlin Concrete Company</title>
   </head>
@@ -83,7 +83,6 @@
               href="#square_slab"
               role="tab"
               aria-controls="square_slab, square_column_picture"
-              onclick="navTabClicked(this.id)"
               >Square Slab</a
             >
           </li>
@@ -95,7 +94,6 @@
               href="#round_slab"
               role="tab"
               aria-controls="round_slab"
-              onclick="navTabClicked(this.id)"
               >Round Slab</a
             >
           </li>
@@ -107,7 +105,6 @@
               href="#wall"
               role="tab"
               aria-controls="wall"
-              onclick="navTabClicked(this.id)"
               >Wall</a
             >
           </li>
@@ -119,7 +116,6 @@
               href="#footer"
               role="tab"
               aria-controls="footer"
-              onclick="navTabClicked(this.id)"
               >Footer</a
             >
           </li>
@@ -131,7 +127,6 @@
               href="#square_column"
               role="tab"
               aria-controls="square_column"
-              onclick="navTabClicked(this.id)"
               >Square Column</a
             >
           </li>
@@ -143,7 +138,6 @@
               href="#round_column"
               role="tab"
               aria-controls="round_column"
-              onclick="navTabClicked(this.id)"
               >Round Column</a
             >
           </li>
@@ -155,7 +149,6 @@
               href="#steps"
               role="tab"
               aria-controls="steps"
-              onclick="navTabClicked(this.id)"
               >Steps</a
             >
           </li>
@@ -167,7 +160,6 @@
               href="#curb_gutter"
               role="tab"
               aria-controls="curb_gutter"
-              onclick="navTabClicked(this.id)"
               >Curb & Gutter</a
             >
           </li>
@@ -177,57 +169,78 @@
       <div class="row input_picture_container">
         <!--Tab panels for input field-->
         <div class="col-sm-6 tab-content">
-          <div class="tab-pane active" id="square_slab" role="tabpanel">
+          <div class="tab-pane" id="square_slab" role="tabpanel">
             <h3>squareslab</h3>
-            <form name="square-slab-form">
+            <form
+              id="squareslab-form"
+              method="POST"
+              action="/calculate/squareslab"
+            >
+              <label for="squareslab_depth">Depth</label>
               <input
                 type="text"
                 class="calculator-input"
                 placeholder="Depth"
-                name="squareslab-depth"
+                name="squareslab_depth"
               />
-              <select name="squareslab-depth-measurement">
+              <label for="squareslab_depth_measurement"
+                >Select measurement</label
+              >
+              <select name="squareslab_depth_measurement">
                 <option value="feet">Feet</option>
                 <option value="inches">Inches</option>
               </select>
+              <label for="squareslab_length">Length</label>
               <input
                 type="text"
                 class="calculator-input"
                 placeholder="Length"
-                name="squareslab-length"
+                name="squareslab_length"
               />
-              <select name="squareslab-length-measurement">
+              <label for="squareslab_length_measurement"
+                >Select measurement</label
+              >
+              <select name="squareslab_length_measurement">
                 <option value="feet">Feet</option>
                 <option value="inches">Inches</option>
               </select>
+              <label for="squareslab_width">Width</label>
               <input
                 type="text"
                 class="calculator-input"
                 placeholder="Width"
-                name="squareslab-width"
+                name="squareslab_width"
               />
-              <select name="squareslab-width-measurement">
+              <label for="squareslab_width_measurement"
+                >Select measurement</label
+              >
+              <select name="squareslab_width_measurement">
                 <option value="feet">Feet</option>
                 <option value="inches">Inches</option>
               </select>
+              <label for="squareslab_quantity">Quantity</label>
               <input
                 type="text"
                 class="calculator-input"
                 placeholder="Quantity"
-                name="squareslab-quantity"
+                name="squareslab_quantity"
               />
               <input
                 type="submit"
                 class="calculator-submit-button"
                 placeholder="Submit"
                 name="squareslab_submit"
-                onclick="calculateYardage()"
+                id="squareslab_submit"
               />
             </form>
           </div>
           <div class="tab-pane" id="round_slab" role="tabpanel">
             <h3>roundslab</h3>
-            <form>
+            <form
+              id="roundslab-form"
+              method="POST"
+              action="/roundslabcalculate"
+            >
               <input
                 type="text"
                 class="calculator-input"
@@ -264,7 +277,7 @@
           </div>
           <div class="tab-pane" id="wall" role="tabpanel">
             <h3>wall</h3>
-            <form>
+            <form id="wall-form" method="POST" action="/wallcalculate">
               <input
                 type="text"
                 class="calculator-input"
@@ -311,7 +324,7 @@
           </div>
           <div class="tab-pane" id="footer" role="tabpanel">
             <h3>footer</h3>
-            <form>
+            <form id="footer-form" method="POST" action="/footercalculate">
               <input
                 type="text"
                 class="calculator-input"
@@ -359,7 +372,11 @@
           </div>
           <div class="tab-pane" id="square_column" role="tabpanel">
             <h3>squarecolumn</h3>
-            <form>
+            <form
+              id="squarecolumn-form"
+              method="POST"
+              action="/squarecolumncalculate"
+            >
               <input
                 type="text"
                 class="calculator-input"
@@ -407,7 +424,11 @@
           </div>
           <div class="tab-pane" id="round_column" role="tabpanel">
             <h3>roundcolumn</h3>
-            <form>
+            <form
+              id="roundcolumn-form"
+              method="POST"
+              action="/roundcolumncalculate"
+            >
               <input
                 type="text"
                 class="calculator-input"
@@ -445,7 +466,7 @@
           </div>
           <div class="tab-pane" id="steps" role="tabpanel">
             <h3>Steps</h3>
-            <form>
+            <form id="steps-form" method="POST" action="/stepscalculate">
               <input
                 type="text"
                 class="calculator-input"
@@ -509,7 +530,11 @@
           </div>
           <div class="tab-pane" id="curb_gutter" role="tabpanel">
             <h3>curbgutter</h3>
-            <form>
+            <form
+              id="curbgutter-form"
+              method="POST"
+              action="/curbguttercalculate"
+            >
               <input
                 type="text"
                 class="calculator-input"
@@ -585,11 +610,13 @@
       <div class="col-sm-3">
         <div class="answer-box" id="cubic-yards">
           <h4>Total Cubic Yardage:</h4>
+          <span id="cubic-yards-answer"></span>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="answer-box" id="cubic-feet">
           <h4>Total Cubic Feet:</h4>
+          <span id="cubic-feet-answer"></span>
         </div>
       </div>
     </section>
@@ -640,6 +667,6 @@
     ></script>
 
     <!-- Link to External Javascript File -->
-    <script type="text/javascript" src="./javascript/main1.js"></script>
+    <script type="text/javascript" src="../public/javascript/main1.js"></script>
   </body>
 </html>
