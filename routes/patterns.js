@@ -51,7 +51,6 @@ router.post("/calculate/squareslab", function(req, res) {
 });
 
 router.post("/calculate/roundslab", function(req, res) {
-  console.log(req.body);
   var roundslab_depth,
     roundslab_depth_measurement,
     roundslab_diameter,
@@ -77,8 +76,7 @@ router.post("/calculate/roundslab", function(req, res) {
   if (roundslab_diameter_measurement == "inches") {
     roundslab_diameter = roundslab_diameter / 12;
   }
-  console.log(roundslab_depth);
-  console.log(roundslab_diameter);
+
   roundslab_radius = roundslab_diameter / 2;
   squared_radius = roundslab_radius * roundslab_radius;
   roundslab_area = pi * squared_radius;
@@ -94,7 +92,6 @@ router.post("/calculate/roundslab", function(req, res) {
 });
 
 router.post("/calculate/wall", function(req, res) {
-  console.log(req.body);
   var wall_height,
     wall_height_measurement,
     wall_length,
@@ -322,7 +319,6 @@ router.post("/calculate/steps", function(req, res) {
 });
 
 router.post("/calculate/curbsgutters", function(req, res) {
-  console.log(req.body);
   var curb_depth,
     curb_depth_measurement,
     curb_height,
@@ -366,11 +362,6 @@ router.post("/calculate/curbsgutters", function(req, res) {
   if (curb_length_measurement == "inches") {
     curb_length = curb_length / 12;
   }
-  console.log(curb_depth);
-  console.log(curb_height);
-  console.log(gutter_width);
-  console.log(flag_thickness);
-  console.log(curb_length);
 
   curbCubicFeet = curb_depth * curb_length * (curb_height + flag_thickness);
   gutterCubicFeet = curb_length * gutter_width * flag_thickness;
