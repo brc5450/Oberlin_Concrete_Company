@@ -6,6 +6,10 @@ A website for a concrete business
 
 Version 1 - with post routes for each concrete pattern to calculate the user inputs and return the cubic Feet and Cubic Yardage with index.handlebars file
 
+# To-Do for version 1
+
+Add labels for 8 pattern user inputs and restyle with business owner's inputs
+
 # To-Do for version 2
 
 For version 2 would like to expand on express with passport.js for user authentication and adding a database so users can save their calculations to a work order ticket and submit with project description and user information for the business owner to be able to review
