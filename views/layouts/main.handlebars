@@ -1,367 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-    <!-- Link to stylesheet -->
-    <link rel="stylesheet" href="/css/style1.css" />
-
-    <title>Oberlin Concrete Company</title>
+    {{!-- Google Fonts --}}
+    <link href="https://fonts.googleapis.com/css?family=Staatliches|Roboto&display=swap" rel="stylesheet">
+    {{!-- CSS --}}
+    <link rel="stylesheet" href="/css/style1.css">
 </head>
 
 <body>
-    <!-- Navbar 1 column-->
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">Oberlin Concrete Co.</a>
 
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    {{!-- Navigation --}}
+    <header>
 
-        <!-- Navbar links -->
-        <div class="container-nav">
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Logo 1 column-->
-    <section class="logo container-fluid">
-        <img src="/images/concrete_sign.jpg" />
-    </section>
-    <!--Transition Border with company saying 1 column-->
-    <section class="companySaying container-fluid">
-        <div class="row">
-            <h3 class="col-sm-6">We turn your ideas into concrete</h3>
-            <h3 class="col-sm-6">Professional custom concrete work</h3>
-        </div>
-    </section>
-    <!-- Calculator nav-tab section -->
-    <section class="calculator container-fluid">
-        <!-- Tab list-->
-        <div class="row">
-            <ul class="nav nav-tabs" id="patternTab" role="tablist">
-                <li class="nav-item active">
-                    <a class="nav-link" id="square_slab_tab" data-toggle="tab" href="#square_slab" role="tab"
-                        aria-controls="square_slab, square_column_picture">Square Slab</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="round_slab_tab" data-toggle="tab" href="#round_slab" role="tab"
-                        aria-controls="round_slab">Round Slab</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="wall_tab" data-toggle="tab" href="#wall" role="tab"
-                        aria-controls="wall">Wall</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="footer_tab" data-toggle="tab" href="#footer" role="tab"
-                        aria-controls="footer">Footer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="square_column_tab" data-toggle="tab" href="#square_column" role="tab"
-                        aria-controls="square_column">Square Column</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="round_column_tab" data-toggle="tab" href="#round_column" role="tab"
-                        aria-controls="round_column">Round Column</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="steps_tab" data-toggle="tab" href="#steps" role="tab"
-                        aria-controls="steps">Steps</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="curb_gutter_tab" data-toggle="tab" href="#curb_gutter" role="tab"
-                        aria-controls="curb_gutter">Curb & Gutter</a>
-                </li>
+        <img src="/images/Logo2.png" alt="" id="logo">
+        <nav>
+            <a href="#" id="menu-icon"><i class="fas fa-bars"></i></a>
+            <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-        </div>
-        <!-- Tab content-->
-        <div class="row input_picture_container">
-            <!--Tab panels for input field-->
-            <div class="col-sm-6 tab-content">
-                <div class="tab-pane" id="square_slab" role="tabpanel">
-                    <h3>squareslab</h3>
-                    <form id="squareslab-form" method="POST" action="/calculate/squareslab">
-                        <label for="squareslab_depth">Depth</label>
-                        <input type="text" class="calculator-input" placeholder="Depth" name="squareslab_depth" />
-                        <label for="squareslab_depth_measurement">Select measurement</label>
-                        <select name="squareslab_depth_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <label for="squareslab_length">Length</label>
-                        <input type="text" class="calculator-input" placeholder="Length" name="squareslab_length" />
-                        <label for="squareslab_length_measurement">Select measurement</label>
-                        <select name="squareslab_length_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <label for="squareslab_width">Width</label>
-                        <input type="text" class="calculator-input" placeholder="Width" name="squareslab_width" />
-                        <label for="squareslab_width_measurement">Select measurement</label>
-                        <select name="squareslab_width_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <label for="squareslab_quantity">Quantity</label>
-                        <input type="text" class="calculator-input" placeholder="Quantity" name="squareslab_quantity" />
-                        <input type="submit" class="calculator-submit-button" placeholder="Submit"
-                            name="squareslab_submit" id="squareslab_submit" />
-                    </form>
-                </div>
-                <div class="tab-pane" id="round_slab" role="tabpanel">
-                    <h3>roundslab</h3>
-                    <form id="roundslab-form" method="POST" action="/calculate/roundslab">
-                        <label for="roundslab_depth">Depth</label>
-                        <input type="text" class="calculator-input" placeholder="Depth" name="roundslab_depth" />
-                        <label for="roundslab_depth_measurement">Select measurement</label>
-                        <select name="roundslab_depth_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <label for="roundslab_diameter">Diameter</label>
-                        <input type="text" class="calculator-input" placeholder="Diameter" name="roundslab_diameter" />
-                        <label for="roundslab_diameter_measurement">Select measurement</label>
-                        <select name="roundslab_diameter_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <label for="roundslab_quantity">Quantity</label>
-                        <input type="text" class="calculator-input" placeholder="Quantity" name="roundslab_quantity" />
-                        <input type="submit" class="calculator-submit-button" placeholder="Submit"
-                            id="roundslab_submit" />
-                    </form>
-                </div>
-                <div class="tab-pane" id="wall" role="tabpanel">
-                    <h3>wall</h3>
-                    <form id="wall-form" method="POST" action="/calculate/wall">
-                        <label for="wall_height">Height</label>
-                        <input type="text" class="calculator-input" placeholder="Height" name="wall_height" />
-                        <label for="wall_height_measurement">Select measurement</label>
-                        <select name="wall_height_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <label for="wall_length">Length</label>
-                        <input type="text" class="calculator-input" placeholder="Length" name="wall_length" />
-                        <label for="wall_length_measurement">Select measurement</label>
-                        <select name="wall_length_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <label for="wall_thickness">Thickness</label>
-                        <input type="text" class="calculator-input" placeholder="Thickness" name="wall_thickness" />
-                        <label for="wall_thickness_measurement">Select measurement</label>
-                        <select name="wall_thickness_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <label for="wall_quantity">Quantity</label>
-                        <input type="text" class="calculator-input" placeholder="Quantity" name="wall_quantity" />
-                        <input type="submit" class="calculator-submit-button" placeholder="Submit" id="wall_submit" />
-                    </form>
-                </div>
-                <div class="tab-pane" id="footer" role="tabpanel">
-                    <h3>footer</h3>
-                    <form id="footer-form" method="POST" action="/calculate/footer">
-                        <input type="text" class="calculator-input" placeholder="Depth" name="footer_depth" />
-                        <select name="footer_depth_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Length" name="footer_length" />
-                        <select name="footer_length_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Width" name="footer_width" />
-                        <select name="footer_width_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Quantity" name="footer_quantity" />
+        </nav>
 
-                        <input type="submit" class="calculator-submit-button" placeholder="Submit" id="footer_submit" />
-                    </form>
-                </div>
-                <div class="tab-pane" id="square_column" role="tabpanel">
-                    <h3>squarecolumn</h3>
-                    <form id="squarecolumn-form" method="POST" action="/calculate/squarecolumn">
-                        <input type="text" class="calculator-input" placeholder="Height" name="squarecolumn_height" />
-                        <select name="squarecolumn_height_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Length" name="squarecolumn_length" />
-                        <select name="squarecolumn_length_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Width" name="squarecolumn_width" />
-                        <select name="squarecolumn_width_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Quantity"
-                            name="squarecolumn_quantity" />
+    </header>
 
-                        <input type="submit" class="calculator-submit-button" placeholder="Submit"
-                            id="squarecolumn_submit" />
-                    </form>
-                </div>
-                <div class="tab-pane" id="round_column" role="tabpanel">
-                    <h3>roundcolumn</h3>
-                    <form id="roundcolumn-form" method="POST" action="/calculate/roundcolumn">
-                        <input type="text" class="calculator-input" placeholder="Height" name="roundcolumn_height" />
-                        <select name="roundcolumn_height_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Diameter"
-                            name="roundcolumn_diameter" />
-                        <select name="roundcolumn_diameter_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Quantity"
-                            name="roundcolumn_quantity" />
 
-                        <input type="submit" class="calculator-submit-button" placeholder="Submit"
-                            id="roundcolumn_submit" />
-                    </form>
-                </div>
-                <div class="tab-pane" id="steps" role="tabpanel">
-                    <h3>Steps</h3>
-                    <form id="steps-form" method="POST" action="/calculate/steps">
-                        <input type="text" class="calculator-input" placeholder="Platform Depth"
-                            name="steps_platformdepth" />
-                        <select name="steps_platformdepth_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Rise Height" name="steps_riseheight" />
-                        <select name="steps_riseheight_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Run Depth" name="steps_rundepth" />
-                        <select name="steps_rundepth_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Width" name="steps_width" />
-                        <select name="steps_width_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Number of Steps including platform"
-                            name="steps_numberofsteps" />
-                        <input type="text" class="calculator-input" placeholder="Quantity" name="steps_quantity" />
-
-                        <input type="submit" class="calculator-submit-button" placeholder="Submit" id="steps_submit" />
-                    </form>
-                </div>
-                <div class="tab-pane" id="curb_gutter" role="tabpanel">
-                    <h3>curbgutter</h3>
-                    <form id="curbgutter-form" method="POST" action="/calculate/curbsgutters">
-                        <input type="text" class="calculator-input" placeholder="Curb Depth" name="curb_depth" />
-                        <select name="curb_depth_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Curb Height" name="curb_height" />
-                        <select name="curb_height_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Gutter Width" name="gutter_width" />
-                        <select name="gutter_width_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Flag Thickness"
-                            name="flag_thickness" />
-                        <select name="flag_thickness_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Length" name="curb_length" />
-                        <select name="curb_length_measurement">
-                            <option value="feet">Feet</option>
-                            <option value="inches">Inches</option>
-                        </select>
-                        <input type="text" class="calculator-input" placeholder="Quantity" name="curb_quantity" />
-
-                        <input type="submit" class="calculator-submit-button" placeholder="Submit" id="curb_submit" />
-                    </form>
-                </div>
-            </div>
-            <!--Tab panels for pattern image-->
-            <div class="col-sm-6 calculator-image" id="patternImg"></div>
-        </div>
-    </section>
-
-    <!-- Calculator Answer Field -->
-    {{{ body }}}
-
-    <!-- Contact Us Section  2 column-->
-    <section class="contactUs container-fluid">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="contact-us-box">
-                    <h1>Contact Us</h1>
-                    <h1>Oberlin Concrete Company</h1>
-                    <h1>701 N Penn Ave, Oberlin, KS 67749</h1>
-                    <h1>(785) 475-3733</h1>
-                </div>
-            </div>
-            <div class="col-sm-6 googleMap">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.1474075358315!2d-100.53099008462792!3d39.826112599270516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x879fe754c675f09b%3A0x6003231663a4501b!2s701+N+Penn+Ave%2C+Oberlin%2C+KS+67749!5e0!3m2!1sen!2sus!4v1550549915148"
-                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    {{!-- Showcase --}}
+    <div class="showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <h1>Oberlin Concrete Company</h1>
+                <h2>Ready Mix Concrete and Professional Construction</h2>
+                <a href="#" class="btn">Contact Us <i class="fas fa-chevron-right btn-icon"></i></a>
             </div>
         </div>
-    </section>
-    <!-- Footer 1 column-->
-    <footer class="container-fluid">
-        Copyright 2019
-    </footer>
+    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    {{!-- Services Section --}}
+    <div class="servicesSection">
+        <div class="container">
+            <div class="services-content">
+                <h2>Our Services</h2>
+                <h3>We're here to Help with all of your concrete construction needs</h3>
+            </div>
+            <div class="image-box-content">
+                <div class="box1"><img src="/images/Concrete.jpg" alt="">
+                    <h3>Ready Mix Concrete</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas dolore itaque porro
+                        perferendis tempore nesciunt at, mollitia aspernatur vitae doloremque ullam quod incidunt
+                        molestiae quos sunt nihil aut earum.</p>
+                </div>
+                <div class="box2">
+                    <img src="/images/Concrete.jpg" alt="">
+                    <h3>Mudjacking</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas dolore itaque porro
+                        perferendis tempore nesciunt at, mollitia aspernatur vitae doloremque ullam quod incidunt
+                        molestiae quos sunt nihil aut earum.</p>
+                </div>
+                <div class="box3"><img src="/images/Concrete.jpg" alt="">
+                    <h3>Business Hours</h3>
+                    <ul class="hours">
+                        <p><i class="fas fa-clock"></i>&nbsp<span style="font-weight: 700">Monday:</span>&nbsp8:00 AM -
+                            5:00
+                            PM</p>
+                        <p><i class="fas fa-clock"></i>&nbsp<span style="font-weight: 700">Tuesday-Sunday: Closed</span>
+                        </p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Link to External Javascript File -->
-    <script type="text/javascript" src="/javascript/main1.js"></script>
+    {{!-- Get A Quote Section --}}
+    <div class="quoteSection">
+        <div class="quote-content">
+            <h2>We turn your ideas into concrete</h2>
+            <a href="#" class="btn-outline">GET A QUOTE <i class="fas fa-chevron-right btn-icon"></i></a>
+        </div>
+    </div>
+
+    {{!-- Calculator Section --}}
+
+    <div class="calculatorSection">
+        <div class="container">
+            <div class="calculator-content">
+                <h2>Concrete Estimate Calculator</h2>
+                <p>Please enter your specific details below for a rough estimate on the amount of concrete needed for
+                    your project </p>
+            </div>
+            <div class="calculator">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+                <p>9</p>
+                <p>10</p>
+                <p>11</p>
+                <p>12</p>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Footer --}}
+
+    <div class="footerSection">
+        <div class="footer-overlay">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer1">
+                        <h3>Hello World</h3>
+                        <p>footer link</p>
+                    </div>
+                    <div class="footer1">
+                        <h3>Hello World</h3>
+                        <p>footer link</p>
+                    </div>
+                    <div class="footer1">
+                        <h3>Hello World</h3>
+                        <p>footer link</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyrightSection">
+        <div class="container">
+            <div class="copyright">
+                <h6>2019 © Oberlin Concrete Company</h6>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Font Awesome --}}
+    <script src="https://kit.fontawesome.com/3e3e4dd88c.js"></script>
 </body>
 
 </html>
