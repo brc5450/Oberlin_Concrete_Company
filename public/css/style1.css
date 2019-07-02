@@ -428,7 +428,7 @@ a {
       font-weight: 700;
       font-size: 4rem;
       line-height: 1;
-      margin: 2rem 0;
+      margin: 1rem 0;
 
     }
   }
@@ -438,8 +438,14 @@ a {
       font-weight: 600;
       font-size: 1.5rem;
       line-height: 1.2;
-      margin: 2rem 0;
+      margin-bottom: 15px;
       color: var(--light-color);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .btn {
+      margin-bottom: 20px;
     }
   }
 
