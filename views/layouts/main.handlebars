@@ -94,64 +94,165 @@
                     your project </p>
             </div>
             <div class="calculator">
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
-                <p>4</p>
-                <p>5</p>
-                <p>6</p>
-                <p>7</p>
-                <p>8</p>
-                <p>9</p>
-                <p>10</p>
-                <p>11</p>
-                <p>12</p>
+                <div class="tabs">
+                    <input type="radio" name="tabs" id="tabone" checked="checked">
+                    <label for="tabone">Square Slab</label>
+                    <div class="tab">
+                        <div class="tabImage">
+                        </div>
+                        <div class="tabForm">
+                            <img src="/images/square_slab.png" alt="image of a square slab" id="squareSlab">
+                            {{!-- Square Slab --}}
+                            <div class="tab-pane" id="square_slab" role="tabpanel">
+
+                                <form id="squareslab-form" method="POST" action="/calculate/squareslab">
+                                    <label for="squareslab_depth">Depth</label>
+                                    <input type="text" class="calculator-input" placeholder="Depth"
+                                        name="squareslab_depth" />
+                                    <label for="squareslab_depth_measurement">Select measurement</label>
+                                    <select name="squareslab_depth_measurement">
+                                        <option value="feet">Feet</option>
+                                        <option value="inches">Inches</option>
+                                    </select>
+                                    <label for="squareslab_length">Length</label>
+                                    <input type="text" class="calculator-input" placeholder="Length"
+                                        name="squareslab_length" />
+                                    <label for="squareslab_length_measurement">Select measurement</label>
+                                    <select name="squareslab_length_measurement">
+                                        <option value="feet">Feet</option>
+                                        <option value="inches">Inches</option>
+                                    </select>
+                                    <label for="squareslab_width">Width</label>
+                                    <input type="text" class="calculator-input" placeholder="Width"
+                                        name="squareslab_width" />
+                                    <label for="squareslab_width_measurement">Select measurement</label>
+                                    <select name="squareslab_width_measurement">
+                                        <option value="feet">Feet</option>
+                                        <option value="inches">Inches</option>
+                                    </select>
+                                    <label for="squareslab_quantity">Quantity</label>
+                                    <input type="text" class="calculator-input" placeholder="Quantity"
+                                        name="squareslab_quantity" />
+                                    <input type="submit" class="calculator-submit-button" placeholder="Submit"
+                                        name="squareslab_submit" id="squareslab_submit" />
+                                </form>
+                                {{{ body }}}
+                            </div>
+                            {{!--  --}}
+
+                        </div>
+                    </div>
+
+                    <input type="radio" name="tabs" id="tabtwo">
+                    <label for="tabtwo">Round Slab</label>
+                    <div class="tab">
+                        <h1>Round Slab</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                    <input type="radio" name="tabs" id="tabthree">
+                    <label for="tabthree">Wall</label>
+                    <div class="tab">
+                        <h1>Wall</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+
+                    <input type="radio" name="tabs" id="tabfour">
+                    <label for="tabfour">Footer</label>
+                    <div class="tab">
+                        <h1>Footer</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+
+                    <input type="radio" name="tabs" id="tabfive">
+                    <label for="tabfive">Square Column</label>
+                    <div class="tab">
+                        <h1>Square Column</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+
+                    <input type="radio" name="tabs" id="tabsix">
+                    <label for="tabsix">Round Column</label>
+                    <div class="tab">
+                        <h1>Round Column</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+
+                    <input type="radio" name="tabs" id="tabseven">
+                    <label for="tabseven">Steps</label>
+                    <div class="tab">
+                        <h1>Steps</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+
+                    <input type="radio" name="tabs" id="tabeight">
+                    <label for="tabeight">Curb & Gutter</label>
+                    <div class="tab">
+                        <h1>Curb & Gutter</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-    </div>
 
-    {{!-- Footer --}}
+        {{!-- Footer --}}
 
-    <div class="footerSection">
-        <div class="footer-overlay">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer1">
-                        <img src="/images/Logo2.png" alt="" id="footer-logo">
-                        <p>Choose Oberlin Concrete for all of your concrete and custom construction needs.</p>
-                    </div>
-                    <div class="footer2">
-                        <h3>Links</h3>
-                        <p>Home</p>
-                        <p>Contact</p>
-                    </div>
-                    <div class="footer3">
-                        <h3><i class="fas fa-clock"></i>&nbspBusiness Hours</h3>
-                        <ul class="hours">
-                            <p><span style="font-weight: 700">Monday:</span>8:00
-                                AM -
-                                5:00
-                                PM</p>
-                            <p><span style="font-weight: 700">Tuesday-Sunday:
-                                    Closed</span>
-                            </p>
-                        </ul>
+        <div class="footerSection">
+            <div class="footer-overlay">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer1">
+                            <img src="/images/Logo2.png" alt="" id="footer-logo">
+                            <p>Choose Oberlin Concrete for all of your concrete and custom construction needs.</p>
+                        </div>
+                        <div class="footer2">
+                            <h3>Links</h3>
+                            <p>Home</p>
+                            <p>Contact</p>
+                        </div>
+                        <div class="footer3">
+                            <h3>Contact Us</h3>
+                            <p>Oberlin Concrete Company</p>
+                            <p>701 N Penn Ave, Oberlin, KS 67749</p>
+                            <p>(785) 475-3733</p><br>
+                            <h4><i class="fas fa-clock"></i>&nbspBusiness Hours</h4>
+                            <ul class="hours">
+                                <p><span style="font-weight: 700">Monday:</span>8:00
+                                    AM -
+                                    5:00
+                                    PM</p>
+                                <p><span style="font-weight: 700">Tuesday-Sunday:
+                                        Closed</span>
+                                </p>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="copyrightSection">
-        <div class="container">
-            <div class="copyright">
-                <h6>2019 © Oberlin Concrete Company</h6>
+        <div class="copyrightSection">
+            <div class="container">
+                <div class="copyright">
+                    <h6>2019 © Oberlin Concrete Company</h6>
+                </div>
             </div>
         </div>
-    </div>
 
-    {{!-- Font Awesome --}}
-    <script src="https://kit.fontawesome.com/3e3e4dd88c.js"></script>
+        {{!-- Font Awesome --}}
+        <script src="https://kit.fontawesome.com/3e3e4dd88c.js"></script>
 </body>
 
 </html>
