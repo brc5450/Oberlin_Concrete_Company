@@ -105,9 +105,11 @@ a {
   align-items: center;
   width: 100%;
   min-height: 50vh;
-  background: url(../images/building-building-site-cement-2469\Frame.jpg)
-    no-repeat center top/cover;
-  box-shadow: inset 50px 50px 100px #000000, inset -50px -50px 100px #000000;
+  background-image: url(../images/building.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 5px 5px 100px #000000, inset -5px -5px 100px #000000;
 }
 
 .showcase-content h1 {
@@ -136,17 +138,25 @@ a {
 /* Services Section */
 
 .servicesSection {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   min-height: 400px;
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
+.services-container {
+  background-color: #fff;
+  transform: translateY(-100px);
+}
+
+
 .services-content h2 {
-  margin-top: 10px;
+  margin-top: 30px;
   text-align: center;
   color: var(--primary-color);
   text-transform: uppercase;
+
 }
 
 .services-content h3 {
@@ -335,15 +345,16 @@ input[type="submit"]:hover {
   display: none;
 }
 
-.tabs input[type="radio"]:checked + label {
+.tabs input[type="radio"]:checked+label {
   background: #fff;
 }
 
-.tabs input[type="radio"]:checked + label + .tab {
+.tabs input[type="radio"]:checked+label+.tab {
   display: block;
 }
 
 @media (max-width: 1193px) {
+
   .tabs .tab,
   .tabs label {
     order: initial;

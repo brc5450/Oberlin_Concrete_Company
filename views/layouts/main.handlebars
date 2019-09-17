@@ -3,14 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
     <title>Document</title>
 
     {{!-- Google Fonts --}}
-    <link href="https://fonts.googleapis.com/css?family=Staatliches|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches|Roboto&display=swap"
+          rel="stylesheet">
     {{!-- CSS --}}
-    <link rel="stylesheet" href="/css/style1.css">
+    <link rel="stylesheet"
+          href="/css/style1.css">
 </head>
 
 <body>
@@ -18,11 +22,15 @@
     {{!-- Navigation --}}
     <header>
 
-        <img src="/images/Logo2.png" alt="" id="logo">
+        <img src="/images/Logo2.png"
+             alt=""
+             id="logo">
         <nav>
-            <a href="#" id="menu-icon"><i class="fas fa-bars"></i></a>
+            <a href="#"
+               id="menu-icon"><i class="fas fa-bars"></i></a>
             <ul>
-                <li><a href="#" class="current">Home</a></li>
+                <li><a href="#"
+                       class="current">Home</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -36,33 +44,37 @@
             <div class="showcase-content">
                 <h1>Oberlin Concrete Company</h1>
                 <h2>Ready Mix Concrete and Professional Construction</h2>
-                <a href="#" class="btn">Contact Us <i class="fas fa-chevron-right btn-icon"></i></a>
+                <a href="#"
+                   class="btn">Contact Us <i class="fas fa-chevron-right btn-icon"></i></a>
             </div>
         </div>
     </div>
 
     {{!-- Services Section --}}
     <div class="servicesSection">
-        <div class="container">
+        <div class="services-container container">
             <div class="services-content">
                 <h2>Our Services</h2>
                 <h3>We're here to Help with all of your concrete construction needs</h3>
             </div>
             <div class="image-box-content">
-                <div class="box1"><img src="/images/Concrete.jpg" alt="">
+                <div class="box1"><img src="/images/Concrete.jpg"
+                         alt="">
                     <h3>Ready Mix Concrete</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas dolore itaque porro
                         perferendis tempore nesciunt at, mollitia aspernatur vitae doloremque ullam quod incidunt
                         molestiae quos sunt nihil aut earum.</p>
                 </div>
                 <div class="box2">
-                    <img src="/images/Concrete.jpg" alt="">
+                    <img src="/images/Concrete.jpg"
+                         alt="">
                     <h3>Mudjacking</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas dolore itaque porro
                         perferendis tempore nesciunt at, mollitia aspernatur vitae doloremque ullam quod incidunt
                         molestiae quos sunt nihil aut earum.</p>
                 </div>
-                <div class="box3"><img src="/images/Concrete.jpg" alt="">
+                <div class="box3"><img src="/images/Concrete.jpg"
+                         alt="">
                     <h3><i class="fas fa-clock"></i>&nbspBusiness Hours</h3>
                     <ul class="hours">
                         <p><span style="font-weight: 700">Monday:</span>&nbsp8:00 AM -
@@ -80,7 +92,8 @@
     <div class="quoteSection">
         <div class="quote-content">
             <h2>We turn your ideas into concrete</h2>
-            <a href="#" class="btn-outline">GET A QUOTE <i class="fas fa-chevron-right btn-icon"></i></a>
+            <a href="#"
+               class="btn-outline">GET A QUOTE <i class="fas fa-chevron-right btn-icon"></i></a>
         </div>
     </div>
 
@@ -95,46 +108,66 @@
             </div>
             <div class="calculator">
                 <div class="tabs">
-                    <input type="radio" name="tabs" id="tabone" checked="checked">
+                    <input type="radio"
+                           name="tabs"
+                           id="tabone"
+                           checked="checked">
                     <label for="tabone">Square Slab</label>
                     <div class="tab">
                         <div class="tabImage">
                         </div>
                         <div class="tabForm">
-                            <img src="/images/square_slab.png" alt="image of a square slab" id="squareSlab">
+                            <img src="/images/square_slab.png"
+                                 alt="image of a square slab"
+                                 id="squareSlab">
                             {{!-- Square Slab --}}
-                            <div class="tab-pane" id="square_slab" role="tabpanel">
+                            <div class="tab-pane"
+                                 id="square_slab"
+                                 role="tabpanel">
 
-                                <form id="squareslab-form" method="POST" action="/calculate/squareslab">
+                                <form id="squareslab-form"
+                                      method="POST"
+                                      action="/calculate/squareslab">
                                     <label for="squareslab_depth">Depth</label>
-                                    <input type="text" class="calculator-input" placeholder="Depth"
-                                        name="squareslab_depth" />
+                                    <input type="text"
+                                           class="calculator-input"
+                                           placeholder="Depth"
+                                           name="squareslab_depth" />
                                     <label for="squareslab_depth_measurement">Select measurement</label>
                                     <select name="squareslab_depth_measurement">
                                         <option value="feet">Feet</option>
                                         <option value="inches">Inches</option>
                                     </select>
                                     <label for="squareslab_length">Length</label>
-                                    <input type="text" class="calculator-input" placeholder="Length"
-                                        name="squareslab_length" />
+                                    <input type="text"
+                                           class="calculator-input"
+                                           placeholder="Length"
+                                           name="squareslab_length" />
                                     <label for="squareslab_length_measurement">Select measurement</label>
                                     <select name="squareslab_length_measurement">
                                         <option value="feet">Feet</option>
                                         <option value="inches">Inches</option>
                                     </select>
                                     <label for="squareslab_width">Width</label>
-                                    <input type="text" class="calculator-input" placeholder="Width"
-                                        name="squareslab_width" />
+                                    <input type="text"
+                                           class="calculator-input"
+                                           placeholder="Width"
+                                           name="squareslab_width" />
                                     <label for="squareslab_width_measurement">Select measurement</label>
                                     <select name="squareslab_width_measurement">
                                         <option value="feet">Feet</option>
                                         <option value="inches">Inches</option>
                                     </select>
                                     <label for="squareslab_quantity">Quantity</label>
-                                    <input type="text" class="calculator-input" placeholder="Quantity"
-                                        name="squareslab_quantity" />
-                                    <input type="submit" class="calculator-submit-button" placeholder="Submit"
-                                        name="squareslab_submit" id="squareslab_submit" />
+                                    <input type="text"
+                                           class="calculator-input"
+                                           placeholder="Quantity"
+                                           name="squareslab_quantity" />
+                                    <input type="submit"
+                                           class="calculator-submit-button"
+                                           placeholder="Submit"
+                                           name="squareslab_submit"
+                                           id="squareslab_submit" />
                                 </form>
                                 {{{ body }}}
                             </div>
@@ -143,7 +176,9 @@
                         </div>
                     </div>
 
-                    <input type="radio" name="tabs" id="tabtwo">
+                    <input type="radio"
+                           name="tabs"
+                           id="tabtwo">
                     <label for="tabtwo">Round Slab</label>
                     <div class="tab">
                         <h1>Round Slab</h1>
@@ -154,7 +189,9 @@
                             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
 
-                    <input type="radio" name="tabs" id="tabthree">
+                    <input type="radio"
+                           name="tabs"
+                           id="tabthree">
                     <label for="tabthree">Wall</label>
                     <div class="tab">
                         <h1>Wall</h1>
@@ -162,7 +199,9 @@
                             labore et dolore magna aliqua.</p>
                     </div>
 
-                    <input type="radio" name="tabs" id="tabfour">
+                    <input type="radio"
+                           name="tabs"
+                           id="tabfour">
                     <label for="tabfour">Footer</label>
                     <div class="tab">
                         <h1>Footer</h1>
@@ -170,7 +209,9 @@
                             labore et dolore magna aliqua.</p>
                     </div>
 
-                    <input type="radio" name="tabs" id="tabfive">
+                    <input type="radio"
+                           name="tabs"
+                           id="tabfive">
                     <label for="tabfive">Square Column</label>
                     <div class="tab">
                         <h1>Square Column</h1>
@@ -178,7 +219,9 @@
                             labore et dolore magna aliqua.</p>
                     </div>
 
-                    <input type="radio" name="tabs" id="tabsix">
+                    <input type="radio"
+                           name="tabs"
+                           id="tabsix">
                     <label for="tabsix">Round Column</label>
                     <div class="tab">
                         <h1>Round Column</h1>
@@ -186,7 +229,9 @@
                             labore et dolore magna aliqua.</p>
                     </div>
 
-                    <input type="radio" name="tabs" id="tabseven">
+                    <input type="radio"
+                           name="tabs"
+                           id="tabseven">
                     <label for="tabseven">Steps</label>
                     <div class="tab">
                         <h1>Steps</h1>
@@ -194,7 +239,9 @@
                             labore et dolore magna aliqua.</p>
                     </div>
 
-                    <input type="radio" name="tabs" id="tabeight">
+                    <input type="radio"
+                           name="tabs"
+                           id="tabeight">
                     <label for="tabeight">Curb & Gutter</label>
                     <div class="tab">
                         <h1>Curb & Gutter</h1>
@@ -214,7 +261,9 @@
                 <div class="container">
                     <div class="footer-content">
                         <div class="footer1">
-                            <img src="/images/Logo2.png" alt="" id="footer-logo">
+                            <img src="/images/Logo2.png"
+                                 alt=""
+                                 id="footer-logo">
                             <p>Choose Oberlin Concrete for all of your concrete and custom construction needs.</p>
                         </div>
                         <div class="footer2">
